@@ -1,0 +1,30 @@
+package programming;
+
+import java.util.Scanner;
+public class SearchDigit {
+    public static void main(String[] args) {
+    	Scanner scan=new Scanner(System.in);
+    	
+    	System.out.println("Enter the Number: ");
+    	int num=scan.nextInt();
+    	
+    	System.out.println("Enter the Digit you want to Search: ");
+    	int digit=scan.nextInt();
+    	
+    	while(num>0) {
+    		if(num%10==digit) 
+    			//Extracted Digit is equal to digit or not
+    		{  
+    			break;
+    		}
+    		num/=10;     //update number
+    	}
+    	
+    	if(num==0){
+    		System.out.println("Digit Not Found");
+    	}
+    	else {
+    		System.out.println("Digit Found");
+    	}
+    }
+}
