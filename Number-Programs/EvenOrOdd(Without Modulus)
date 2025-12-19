@@ -1,0 +1,20 @@
+package programming;
+import java.util.Scanner;
+public class EvenOdd {
+	public static void main(String[] args) {
+
+		System.out.println("Enter the Number: ");
+		Scanner scan=new Scanner(System.in);
+		int num=scan.nextInt();
+
+
+		if((num/2)*2==num){
+
+			System.out.println("It is even");
+		}
+		else {
+			System.out.println("It is Odd");
+		}
+	}
+
+}
