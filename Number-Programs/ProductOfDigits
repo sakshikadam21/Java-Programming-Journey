@@ -1,0 +1,28 @@
+package programming;
+
+import java.util.Scanner;
+
+public class ProductOfDigits {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the Number:");
+        int num = scan.nextInt();
+
+        int prod = 1;
+
+        if (num == 0) {
+            prod = 0;
+        } else {
+            while (num > 0) {
+                int last = num % 10;
+                prod *= last;
+                num /= 10;
+            }
+        }
+
+        System.out.println("Product of Digits: " + prod);
+        scan.close();
+    }
+}
