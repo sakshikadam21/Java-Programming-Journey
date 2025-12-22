@@ -1,0 +1,29 @@
+package programming;
+
+import java.util.Scanner;
+
+public class FindFactors {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the Number:");
+        int num = scan.nextInt();
+
+        for (int den = 1; den <= num; den++) {
+            if (num % den == 0) {
+                System.out.println(den);
+            }
+        }
+    }
+}
+
+
+
+//  --------Optimized Version---------------
+//for(int den = 1; den <= num/2; den++) {
+//    if(num % den == 0) {
+//        System.out.println(den);
+//    }
+//}
+//System.out.println(num);
