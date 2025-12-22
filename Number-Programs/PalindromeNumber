@@ -1,0 +1,55 @@
+package programming;
+
+import java.util.Scanner;
+
+public class PalindromeNumber {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the Number:");
+        int num = scan.nextInt();
+
+        int temp = num; // Keep original number
+        int rev = 0;
+
+        while (num > 0) {
+            int rem = num % 10;       // Extract last digit
+            rev = rev * 10 + rem;     // Build reverse number
+            num /= 10;                // Remove last digit
+        }
+
+        if (rev == temp) {
+            System.out.println(temp + " is a Palindrome Number");
+        } else {
+            System.out.println(temp + " is not a Palindrome Number");
+        }
+    }
+}
+
+
+
+        /*
+        // ---------- For negative numbers ----------
+        // If you want to handle negative numbers as well,
+        // you can use Math.abs(num) while creating temp copy:
+        //
+        // int temp = Math.abs(num);
+        // int rev = 0;
+        //
+        // while (temp != 0) {
+        //     rev = rev * 10 + (temp % 10);
+        //     temp /= 10;
+        // }
+        //
+        // Then compare rev with Math.abs(num)
+
+
+
+        // Optional: To print original negative sign:
+        // if (num < 0) {
+        //     System.out.println("-" + rev + " is palindrome (by absolute value)");
+        // } else {
+        //     System.out.println(rev + " is not a palindrome");
+        // }
+    */
+
