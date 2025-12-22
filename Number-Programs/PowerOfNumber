@@ -1,0 +1,22 @@
+package programming;
+
+import java.util.Scanner;
+public class Power {
+     public static void main(String[] args) {
+    	 Scanner scan=new Scanner(System.in);
+    	 
+    	 System.out.println("Enter the Base Value: ");
+    	 int base=scan.nextInt();
+    	 
+    	 System.out.println("Enter the Raise Value: ");
+    	 int raise=scan.nextInt();
+    	 
+    	 int prod=1;
+    	 
+    	 for(int times =0; times<raise; times++) {
+    		 prod*=base;
+    	 }
+    	 
+    	 System.out.println("The power of"+base+"^"+raise+" is: "+prod);
+     }
+}
