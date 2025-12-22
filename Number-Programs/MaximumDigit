@@ -1,0 +1,30 @@
+package programming;
+
+import java.util.Scanner;
+
+public class MaximumDigit {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the Number: ");
+        int num = scan.nextInt();
+
+        int max = 0;
+
+        if (num == 0) {
+            max = 0;
+        } else {
+            num = Math.abs(num); // optional
+            while (num > 0) {
+                int last = num % 10;
+                if (last > max) {
+                    max = last;
+                }
+                num /= 10;
+            }
+        }
+
+        System.out.println(max + " is the maximum digit in Number");
+        scan.close();
+    }
+}
