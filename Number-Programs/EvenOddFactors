@@ -1,0 +1,22 @@
+package programming;
+
+import java.util.Scanner;
+
+public class EvenOddFactors {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the Number:");
+        int num = scan.nextInt();
+
+        for (int den = 1; den <= num; den++) {
+            if (num % den == 0) {
+                if (den % 2 == 0) {
+                    System.out.println(den + " is an Even Factor");
+                } else {
+                    System.out.println(den + " is an Odd Factor");
+                }
+            }
+        }
+    }
+}
