@@ -1,0 +1,32 @@
+package programming;
+
+import java.util.Scanner;
+
+public class MinimumDigit {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the Number:");
+        int num = scan.nextInt();
+
+        if (num == 0) {
+            System.out.println("0 is the Minimum digit in Number");
+        } else {
+            num = Math.abs(num); // optional
+            int min = 9; 
+
+            while (num > 0) {
+                int last = num % 10;
+                if (last < min) {
+                    min = last;
+                }
+                num /= 10;
+            }
+
+            System.out.println(min + " is the Minimum digit in Number");
+        }
+
+        scan.close();
+    }
+}
